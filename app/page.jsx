@@ -5,17 +5,24 @@ export default async function Home() {
     cache: "no-store"
   });
 
-  const tasks = await response.json();
+  const data = await response.json();
+  // If the API returns { tasks: [...] }, use data.tasks; otherwise, use data
+  const tasks = Array.isArray(data) ? data : data.tasks;
+
+  console.log(tasks);
 
   return (
-    <div className="{styles.main}">
+    <div className={styles.main}>
       <h1>Task List</h1>
       <ul>
-        {tasks.tasks.map((task) => {
-          <li key={task.id}>{task.title}</li>
-        })}
+        {Array.isArray(tasks) && tasks.length > 0 ? (
+          tasks.map((task) => (
+            <li key={task.id}>{task.title}</li>
+          ))
+        ) : (
+          <li>No tasks found.</li>
+        )}
       </ul>
     </div>
-  ), console.log(tasks);
- 
+  );
 }

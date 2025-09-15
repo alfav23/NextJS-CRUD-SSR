@@ -12,7 +12,7 @@ const CreateTask = () => {
         event.preventDefault();
         if (!title) return;
 
-        const response = await fetch("/api/tasks", {
+        const response = await fetch("\api\tasks", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ title })
