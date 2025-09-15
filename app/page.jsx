@@ -1,9 +1,20 @@
 import styles from "./page.module.css";
 
-export default function Home() {
+export default async function Home() {
+  const response = await fetch("http://localhost:3000/api/tasks", {
+    cache: "no-store"
+  });
+
   return (
-    <main className="{styles.main}">
-      
-    </main>
+    <div className="{styles.main}">
+      <h1>Task List</h1>
+      <ul>
+        {tasks.map((task) => {
+          <>
+            <li key={task.id}>{task.title}</li>
+          </>
+        })}
+      </ul>
+    </div>
   );
 }

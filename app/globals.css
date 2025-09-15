@@ -1,6 +1,6 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #171717;
+  --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -59,6 +59,6 @@ nav a:first-of-type {
 }
 
 main {
-  padding: 24px;
+  padding: 20px;
 }
 
