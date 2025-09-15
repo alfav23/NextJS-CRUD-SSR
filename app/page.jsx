@@ -5,16 +5,17 @@ export default async function Home() {
     cache: "no-store"
   });
 
+  const tasks = await response.json();
+
   return (
     <div className="{styles.main}">
       <h1>Task List</h1>
       <ul>
-        {tasks.map((task) => {
-          <>
-            <li key={task.id}>{task.title}</li>
-          </>
+        {tasks.tasks.map((task) => {
+          <li key={task.id}>{task.title}</li>
         })}
       </ul>
     </div>
-  );
+  ), console.log(tasks);
+ 
 }
