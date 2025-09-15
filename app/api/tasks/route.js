@@ -1,4 +1,4 @@
-const tasks = {};
+const tasks = [];
 
 export async function POST(request) {
     const { title } = await request.json();
@@ -17,3 +17,4 @@ export async function GET() {
         headers: {'Content-Type': 'application/json'}
     });
 }
+
