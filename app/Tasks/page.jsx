@@ -7,15 +7,15 @@ export default function Tasks() {
                 <h3>Task ${task.id}</h3>
                 <p>${task.value}</p>
             </div>
-            }
-        )};    
+            });
+        
+        console.log(tasks);
+        };    
     
     return (
         <form>
             <input placeholder="Type a new task" type="text" value={tasks.task}/>
             <button type="button" onClick={addTask}>Add</button>
         </form>
-    )
-        
-        console.log(tasks);
+    );
 }
