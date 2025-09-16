@@ -19,7 +19,6 @@ export default function RootLayout( { children } ) {
           <> | </>
           <Link href='/create'>Create Task</Link>
         </nav>
-        <h1>Welcome to the Home layout</h1>
         <main> {children} </main>
       </body>
     </html>
