@@ -16,6 +16,7 @@ export default function RootLayout( { children } ) {
       <body className={inter.className}>
         <nav>
           <Link href='/'>Home</Link>
+          <> | </>
           <Link href='/create'>Create Task</Link>
         </nav>
         <h1>Welcome to the Home layout</h1>

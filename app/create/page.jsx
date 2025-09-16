@@ -19,7 +19,17 @@ const CreateTask = () => {
         })
 
         if (response.ok) {
+            // print success message 
+            return(
+                <div>"Added task: {title}
+                    <a href="/">View tasks</a> 
+                </div>
+            );
+            // reload window to reset create task input box
+            window.location.reload();
+            // push new task to home page
             router.push('/')
+            
         } else {
             alert('Failed to create task :(')
         }
