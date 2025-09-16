@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import Link from "next/link"
 
 export default async function Home() {
   const response = await fetch("http://localhost:3000/api/tasks", {
@@ -17,7 +18,13 @@ export default async function Home() {
       <ul>
         {Array.isArray(tasks) && tasks.length > 0 ? (
           tasks.map((task) => (
-            <li key={task.id}>{task.title}</li>
+            <li key={task.id}>{task.title} 
+              <button>
+                <Link className="edit" href={`/edit/${task.id}`}>
+                  Edit
+                </Link>
+              </button>
+            </li>
           ))
         ) : (
           <li>No tasks found.</li>

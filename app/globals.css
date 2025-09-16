@@ -62,3 +62,39 @@ main {
   padding: 20px;
 }
 
+li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #ffffff;
+}
+
+button {
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 1rem;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  padding:.25rem .5rem;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button:hover{
+  border: 2px solid #363636;
+  color: #363636;
+  box-shadow: inset -3px 3px 2px rgb(144, 142, 142);
+  background-color: #ffffff;
+}
+
+Link {
+  background: none;
+  border: none;
+}
+
