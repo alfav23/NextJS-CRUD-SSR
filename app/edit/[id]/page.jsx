@@ -6,7 +6,7 @@ import React from 'react';
 const EditTaskPage = ({ params }) => {
     const [ title, setTitle ] = useState('');
     const router = useRouter();
-    const { id } = React.use(params);
+    const { id } = params;
 
     useEffect(() => {
         const fetchTask = async () => {
