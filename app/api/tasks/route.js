@@ -1,4 +1,4 @@
-const tasks = [];
+import { tasksData as tasks } from './data'
 
 export async function POST(request) {
     const { title } = await request.json();
